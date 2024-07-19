@@ -56,9 +56,6 @@ endif
 	mv $(DESTDIR)/etc/os-release $(DESTDIR)/usr/lib/os-release
 	ln -s ../usr/lib/os-release $(DESTDIR)/etc/os-release
 
-override_dh_installchangelogs:
-	dh_installchangelogs --no-trim
-
 override_dh_link:
 	dh_link -X os-release
 	# We want these links to be relative, so we cannot use dh_link.
